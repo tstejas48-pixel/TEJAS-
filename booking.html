@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment — TEJAS LADIES TYLOR</title>
+  <meta name="description" content="Schedule a bespoke tailoring consultation or measurement trial with TEJAS LADIES TYLOR.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235C1826'><path d='M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Navbar -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">TEJAS LADIES TYLOR</span>
+          <span class="brand-tagline">Bespoke Boutique &amp; Craftsmanship</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="index.html#why" class="nav-link">Why Us</a></li>
+          <li><a href="index.html#how" class="nav-link">How It Works</a></li>
+          <li><a href="booking.html" class="nav-link active">Book Appointment</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <div class="auth-group">
+            <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </div>
+
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="index.html#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="index.html#why" class="mobile-nav-link">Why Us</a></li>
+        <li><a href="booking.html" class="mobile-nav-link active">Book Appointment</a></li>
+        <li><a href="appointments.html" class="mobile-nav-link">My Appointments</a></li>
+        <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-group">
+        <a href="login.html" class="btn btn-outline btn-sm btn-block">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm btn-block">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top:100px;padding-bottom:5rem;">
+    <div class="container">
+      
+      <!-- Breadcrumb / Header -->
+      <div style="margin-bottom:2.5rem;text-align:center;">
+        <span class="section-tag">Schedule a Consultation</span>
+        <h1>Book an <em>Appointment</em></h1>
+        <p class="section-subtitle">
+          Reserve your 1-on-1 boutique fitting session with our master tailor at TEJAS LADIES TYLOR.
+        </p>
+      </div>
+
+      <div class="booking-grid">
+        
+        <!-- Booking Form Card -->
+        <div class="booking-form-card">
+          <h2 style="font-size:1.6rem;margin-bottom:1.5rem;">Appointment Details</h2>
+          
+          <form id="appointmentForm" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group" id="groupFullName">
+              <label for="bookFullName" class="form-label">Full Name *</label>
+              <input type="text" id="bookFullName" class="form-input" placeholder="e.g. Priya Sharma" required>
+              <span class="form-error-msg" id="errFullName">Please provide your full name.</span>
+            </div>
+
+            <!-- Phone & Email (2 cols) -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="form-group" id="groupPhone">
+                <label for="bookPhone" class="form-label">Phone Number *</label>
+                <input type="tel" id="bookPhone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+                <span class="form-error-msg" id="errPhone">Please enter a valid phone number.</span>
+              </div>
+
+              <div class="form-group" id="groupEmail">
+                <label for="bookEmail" class="form-label">Email Address *</label>
+                <input type="email" id="bookEmail" class="form-input" placeholder="e.g. name@example.com" required>
+                <span class="form-error-msg" id="errEmail">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Tailoring Service Selection -->
+            <div class="form-group" id="groupService">
+              <label for="bookService" class="form-label">Select Tailoring Service *</label>
+              <select id="bookService" class="form-select" required>
+                <option value="" disabled selected>-- Choose a tailoring specialty --</option>
+                <option value="Ethnic & Traditional Wear">Ethnic &amp; Traditional Wear (Salwar, Lehengas, Kurtis)</option>
+                <option value="Designer Blouses">Designer Blouses (Saree, Princess, Katori, Bridal)</option>
+                <option value="Western & Fusion Wear">Western &amp; Fusion Wear (Dresses, Trousers, Gowns)</option>
+                <option value="Alterations & Restyling">Alterations &amp; Restyling (Resizing, Upcycling)</option>
+                <option value="Festive & Bridal Wear">Festive &amp; Bridal Wear (Trousseau &amp; Embroidery)</option>
+                <option value="Design Consultation">Design Consultation &amp; Body Measurement Charting</option>
+              </select>
+              <span class="form-error-msg" id="errService">Please select a service.</span>
+            </div>
+
+            <!-- Preferred Date & Time Slot (2 cols) -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="form-group" id="groupDate">
+                <label for="bookDate" class="form-label">Preferred Date *</label>
+                <input type="date" id="bookDate" class="form-input" required>
+                <span class="form-error-msg" id="errDate">Please choose an appointment date (today or later).</span>
+              </div>
+
+              <div class="form-group" id="groupTime">
+                <label for="bookTime" class="form-label">Preferred Time Slot *</label>
+                <select id="bookTime" class="form-select" required>
+                  <option value="" disabled selected>-- Select Time Slot --</option>
+                  <option value="10:30 AM - 11:30 AM">Morning: 10:30 AM – 11:30 AM</option>
+                  <option value="11:30 AM - 12:30 PM">Morning: 11:30 AM – 12:30 PM</option>
+                  <option value="02:00 PM - 03:00 PM">Afternoon: 02:00 PM – 03:00 PM</option>
+                  <option value="03:30 PM - 04:30 PM">Afternoon: 03:30 PM – 04:30 PM</option>
+                  <option value="05:00 PM - 06:00 PM">Evening: 05:00 PM – 06:00 PM</option>
+                  <option value="06:30 PM - 07:30 PM">Evening: 06:30 PM – 07:30 PM</option>
+                </select>
+                <span class="form-error-msg" id="errTime">Please choose a preferred time slot.</span>
+              </div>
+            </div>
+
+            <!-- Additional Requirements -->
+            <div class="form-group" id="groupReqs">
+              <label for="bookRequirements" class="form-label">Additional Requirements &amp; Outfit Notes</label>
+              <textarea id="bookRequirements" class="form-textarea" rows="4" placeholder="Mention design preferences, fabric details (silk, cotton, georgette), event date, or specific neckline styles..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block" id="confirmAppointmentBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Confirm Appointment</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Sidebar Info & Perks -->
+        <aside class="booking-info-card">
+          <h3>Boutique Guarantee</h3>
+          <p style="font-size:0.92rem;color:var(--text-secondary);">
+            Every appointment at TEJAS LADIES TYLOR includes dedicated 1-on-1 attention with our master tailor.
+          </p>
+
+          <ul class="booking-perk-list">
+            <li class="booking-perk-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Private Fitting Trial:</strong> Trial room dedicated exclusively to your fitting comfort.</span>
+            </li>
+            <li class="booking-perk-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Fabric Consultation:</strong> We inspect your cloth and suggest optimal linings, interlinings, and fall.</span>
+            </li>
+            <li class="booking-perk-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Zero Wait Time:</strong> Confirmed appointments are prioritized without standing in queues.</span>
+            </li>
+            <li class="booking-perk-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Stored Profile:</strong> Your measurements are saved so future orders can be placed instantly.</span>
+            </li>
+          </ul>
+
+          <div style="background:var(--bg-surface-alt);padding:1.2rem;border-radius:var(--radius-md);margin-top:1.5rem;font-size:0.86rem;">
+            <strong>Need Immediate Assistance?</strong>
+            <p style="margin:0.35rem 0 0.75rem;font-size:0.84rem;">Call or WhatsApp us directly for urgent festive or bridal bookings:</p>
+            <a href="tel:+919380224737" class="text-gold" style="font-weight:700;font-size:0.95rem;">+91 93802 24737</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       APPOINTMENT CONFIRMATION MODAL CARD
+       ======================================================================== -->
+  <div class="modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="modal-box" style="text-align:center;">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(46,125,50,0.12);color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+
+      <span class="service-badge" style="color:var(--success);background:rgba(46,125,50,0.1);padding:0.25rem 0.75rem;border-radius:9999px;">Booking Confirmed</span>
+      <h2 id="confirmTitle" style="font-size:1.8rem;margin:0.75rem 0 0.5rem;">Appointment Booked Successfully!</h2>
+      <p style="color:var(--text-secondary);font-size:0.92rem;margin-bottom:1.5rem;">
+        Thank you! Your appointment with TEJAS LADIES TYLOR has been recorded in our atelier schedule.
+      </p>
+
+      <!-- Confirmation Summary Card -->
+      <div style="background:var(--bg-surface-alt);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.4rem;text-align:left;margin-bottom:1.8rem;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);">
+          <span style="font-size:0.82rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;">Appointment ID</span>
+          <strong id="confirmApptId" class="text-gold" style="font-family:monospace;font-size:1.05rem;">TLT-2026-001</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.88rem;">
+          <span style="color:var(--text-secondary);">Client Name:</span>
+          <strong id="confirmClientName">Priya Sharma</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.88rem;">
+          <span style="color:var(--text-secondary);">Service:</span>
+          <strong id="confirmService">Designer Blouses</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.88rem;">
+          <span style="color:var(--text-secondary);">Date &amp; Time:</span>
+          <strong id="confirmDateTime">Sept 22, 2026 | 11:30 AM</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:0.88rem;">
+          <span style="color:var(--text-secondary);">Status:</span>
+          <span class="appointment-badge" style="padding:2px 8px;font-size:0.75rem;">Confirmed</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:1rem;justify-content:center;">
+        <a href="appointments.html" class="btn btn-primary" id="viewAppointmentsBtn">View My Appointments</a>
+        <button type="button" class="btn btn-outline" id="bookAnotherBtn">Book Another</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
+        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page specific script for booking form validation & auto-fill -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set min date on date picker to today
+      const dateInput = document.getElementById('bookDate');
+      const todayStr = new Date().toISOString().split('T')[0];
+      if (dateInput) {
+        dateInput.min = todayStr;
+        dateInput.value = todayStr;
+      }
+
+      // Check URL parameters for preselected service
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      const serviceSelect = document.getElementById('bookService');
+      if (serviceParam && serviceSelect) {
+        for (let i = 0; i < serviceSelect.options.length; i++) {
+          if (serviceSelect.options[i].value.toLowerCase() === serviceParam.toLowerCase()) {
+            serviceSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      // Auto-fill customer details if logged in
+      if (window.TLT_AUTH && window.TLT_AUTH.isLoggedIn()) {
+        const user = window.TLT_AUTH.getCurrentUser();
+        if (user) {
+          if (user.fullName) document.getElementById('bookFullName').value = user.fullName;
+          if (user.phone) document.getElementById('bookPhone').value = user.phone;
+          if (user.email) document.getElementById('bookEmail').value = user.email;
+        }
+      }
+
+      // Form submit validation & storage
+      const form = document.getElementById('appointmentForm');
+      const modal = document.getElementById('confirmationModal');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById('bookFullName').value.trim();
+        const phone = document.getElementById('bookPhone').value.trim();
+        const email = document.getElementById('bookEmail').value.trim();
+        const service = document.getElementById('bookService').value;
+        const date = document.getElementById('bookDate').value;
+        const time = document.getElementById('bookTime').value;
+        const requirements = document.getElementById('bookRequirements').value.trim();
+
+        let isValid = true;
+
+        // Reset errors
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
+
+        if (!fullName || fullName.length < 2) {
+          document.getElementById('groupFullName').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!phone || phone.replace(/\D/g, '').length < 7) {
+          document.getElementById('groupPhone').classList.add('has-error');
+          isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          document.getElementById('groupEmail').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!service) {
+          document.getElementById('groupService').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!date) {
+          document.getElementById('groupDate').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!time) {
+          document.getElementById('groupTime').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!isValid) {
+          window.showToast('Please correct the highlighted fields.', 'error');
+          return;
+        }
+
+        // Save appointment via TLT_BOOKING engine
+        const res = window.TLT_BOOKING.createAppointment({
+          fullName,
+          phone,
+          email,
+          service,
+          date,
+          time,
+          requirements
+        });
+
+        if (res.success) {
+          // Populate confirmation modal
+          document.getElementById('confirmApptId').textContent = res.appointment.id;
+          document.getElementById('confirmClientName').textContent = res.appointment.fullName;
+          document.getElementById('confirmService').textContent = res.appointment.service;
+          document.getElementById('confirmDateTime').textContent = `${res.appointment.date} | ${res.appointment.time}`;
+
+          modal.classList.add('active');
+          window.showToast('Appointment booked successfully!', 'success');
+        }
+      });
+
+      // Book another button
+      document.getElementById('bookAnotherBtn').addEventListener('click', () => {
+        modal.classList.remove('active');
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>

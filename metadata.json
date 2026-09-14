@@ -1,0 +1,7 @@
+{
+  "name": "TEJAS LADIES TYLOR",
+  "description": "Exclusive ladies custom tailoring and boutique studio offering bespoke blouses, bridal wear, ethnic gowns, and precision fitting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

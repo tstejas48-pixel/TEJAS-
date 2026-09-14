@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEJAS LADIES TYLOR — Perfect Fit. Timeless Style.</title>
+  <meta name="description" content="Exclusive ladies custom tailoring and boutique studio offering bespoke blouses, bridal wear, ethnic suits, and precision fitting.">
+  <meta property="og:title" content="TEJAS LADIES TYLOR — Perfect Fit. Timeless Style.">
+  <meta property="og:description" content="Exclusive ladies custom tailoring and boutique studio offering bespoke blouses, bridal wear, ethnic suits, and precision fitting.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon / Brand Symbol -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235C1826'><path d='M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z'/></svg>">
+
+  <!-- Pure Vanilla CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       4. NAVIGATION BAR (Sticky, Responsive, Hamburger Menu, Dynamic Auth)
+       ======================================================================== -->
+  <header>
+    <nav class="navbar" id="mainNavbar" aria-label="Main Navigation">
+      <div class="container navbar-container">
+        
+        <!-- Left Side: Brand Logo -->
+        <a href="index.html" class="brand-logo" id="navBrandLink">
+          <span class="brand-name">TEJAS LADIES TYLOR</span>
+          <span class="brand-tagline">Bespoke Boutique &amp; Craftsmanship</span>
+        </a>
+
+        <!-- Middle: Navigation Links -->
+        <ul class="nav-links" id="desktopNavLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why" class="nav-link">Why Us</a></li>
+          <li><a href="#how" class="nav-link">How It Works</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Side: Actions (Theme Toggle + Auth Dynamic Buttons) -->
+        <div class="nav-actions">
+          <!-- Light / Dark Mode Toggle -->
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light and dark theme">
+            <!-- Icon populated by main.js -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <!-- Dynamic Auth Group: Login/Register OR My Account/Logout -->
+          <div class="auth-group" id="desktopAuthGroup">
+            <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm" id="navRegisterBtn">Register</a>
+          </div>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Mobile Slide Drawer -->
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#why" class="mobile-nav-link">The Tejas Difference</a></li>
+        <li><a href="#how" class="mobile-nav-link">How It Works</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="mobile-nav-link">Client Reviews</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact &amp; Location</a></li>
+        <li><a href="booking.html" class="mobile-nav-link text-gold" style="font-weight:700;">Book an Appointment</a></li>
+      </ul>
+
+      <!-- Mobile Auth Buttons -->
+      <div class="mobile-auth-group" id="mobileAuthGroup">
+        <a href="login.html" class="btn btn-outline btn-sm btn-block">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm btn-block">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         5. HERO SECTION
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        
+        <!-- Left Content -->
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Exclusive Ladies Boutique Atelier</span>
+          </div>
+
+          <h1 class="hero-title">
+            <strong>TEJAS LADIES TYLOR</strong><br>
+            Perfect Fit. <em>Timeless Style.</em><br>
+            Tailored Just for You.
+          </h1>
+
+          <p class="hero-desc">
+            Where master craftsmanship meets your personal silhouette. From handcrafted bridal couture and trendsetting designer blouses to impeccably fitted everyday wear, we create garments that make you feel radiant, graceful, and confident.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="booking.html" class="btn btn-primary" id="heroBookBtn">
+              <span>Book an Appointment</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#services" class="btn btn-outline" id="heroServicesBtn">
+              <span>Explore Services</span>
+            </a>
+          </div>
+
+          <!-- Quick Feature Badges -->
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span>Flawless Custom Fitting</span>
+            </div>
+            <div class="hero-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>On-Time Order Delivery</span>
+            </div>
+            <div class="hero-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Over 10+ Years of Craft</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual with Fashion Imagery -->
+        <div class="hero-visual reveal">
+          <div class="hero-image-card">
+            <img 
+              src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80" 
+              alt="Bespoke Indian ethnic fashion couture by TEJAS LADIES TYLOR" 
+              loading="eager"
+            >
+            
+            <!-- Floating Credibility Badge -->
+            <div class="hero-floating-badge">
+              <div class="hero-badge-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z"></path></svg>
+              </div>
+              <div class="hero-badge-text">
+                <strong>Boutique Precision</strong>
+                <span>100% Hand-Tailored Fit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. ABOUT SECTION (Split Layout & Animated Statistics)
+         ====================================================================== -->
+    <section class="section-pad about-section" id="about">
+      <div class="container about-grid">
+        
+        <!-- Left: Image with Quote Box -->
+        <div class="about-media reveal">
+          <div class="about-image-wrapper">
+            <img 
+              src="https://www.amitaggarwal.com/cdn/shop/files/20260122-23-AA_5242.jpg?v=1775728559&width=1946" 
+              alt="Master tailoring measuring tape and fabric cutting atelier" 
+              loading="lazy"
+            >
+          </div>
+          <div class="about-quote-box">
+            <p>"We don't do mass production. We create custom garments designed to make you feel confident, comfortable, and absolutely radiant."</p>
+            <span>— TEJAS LADIES TYLOR</span>
+          </div>
+        </div>
+
+        <!-- Right: Content & Statistics -->
+        <div class="about-details reveal">
+          <span class="section-tag">Our Legacy of Craftsmanship</span>
+          <h2 class="section-title">Welcome to <em>TEJAS LADIES TYLOR</em></h2>
+          
+          <p>
+            At TEJAS LADIES TYLOR, we believe clothing should never be one-size-fits-all. Your attire should celebrate your individuality, complement your body contours, and express your personal grace.
+          </p>
+          <p>
+            With over a decade of dedication to women's bespoke tailoring, our atelier marries age-old needlework traditions with cutting-edge fashion aesthetics. Whether you come with your own cherished silk fabric or seek end-to-end design consultation for your wedding trousseau, every seam is stitched with surgical precision.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="about-points">
+            <div class="about-point-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Perfect Fitting Guaranteed</span>
+            </div>
+            <div class="about-point-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Uncompromising Quality Stitching</span>
+            </div>
+            <div class="about-point-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Personal Style Consultation</span>
+            </div>
+            <div class="about-point-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Detailed Hand Finishing &amp; Interlocking</span>
+            </div>
+          </div>
+
+          <!-- Statistics Counters (Animated on Scroll) -->
+          <div class="stats-row" id="statsRow">
+            <div class="stat-item">
+              <div class="stat-number" data-target="500+">500+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="100%">100%</div>
+              <div class="stat-label">Custom Made</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10+">10+</div>
+              <div class="stat-label">Years of Craft</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. SERVICES SECTION (All 6 Existing Services, Responsive Grid)
+         ====================================================================== -->
+    <section class="section-pad services-section" id="services">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">What We Offer</span>
+          <h2 class="section-title">Crafted for <em>Every Occasion</em></h2>
+          <p class="section-subtitle">
+            From regal bridal trousseaus to contemporary silhouettes and surgical wardrobe alterations, explore our full spectrum of specialized tailoring services.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- Card 1: Ethnic & Traditional Wear -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z"></path></svg>
+              </div>
+              <span class="service-badge">Heritage</span>
+            </div>
+            <h3 class="service-title">Ethnic &amp; Traditional Wear</h3>
+            <p class="service-desc">Elegant pieces rooted in Indian culture, tailored with flawless proportion and graceful flare.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Salwar Suits &amp; Anarkalis</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Flared Lehengas with Can-Can</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Kurtis &amp; Palazzos</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="ethnic">Learn More</button>
+              <a href="booking.html?service=Ethnic%20%26%20Traditional%20Wear" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Designer Blouses -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              </div>
+              <span class="service-badge">Bestseller</span>
+            </div>
+            <h3 class="service-title">Designer Blouses</h3>
+            <p class="service-desc">From classic silk saree blouses to statement-making designer couture with zero shoulder drop.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Classic Princess &amp; Katori Cuts</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Intricate Back &amp; Dori Designs</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sheer &amp; Embellished Necklines</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="blouses">Learn More</button>
+              <a href="booking.html?service=Designer%20Blouses" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Western & Fusion Wear -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <span class="service-badge">Modern Chic</span>
+            </div>
+            <h3 class="service-title">Western &amp; Fusion Wear</h3>
+            <p class="service-desc">Contemporary silhouettes tailored to move with your active lifestyle and professional grace.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Tailored Trousers</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Evening Gowns &amp; Midi Dresses</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Jumpsuits &amp; Formal Skirts</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="western">Learn More</button>
+              <a href="booking.html?service=Western%20%26%20Fusion%20Wear" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Alterations & Restyling -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <span class="service-badge">Precision</span>
+            </div>
+            <h3 class="service-title">Alterations &amp; Restyling</h3>
+            <p class="service-desc">Bringing your cherished existing wardrobe back to life, adjusted to your current measurements.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Professional Resizing &amp; Hemming</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Shoulder &amp; Armhole Adjustments</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Old Saree Wardrobe Upcycling</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="alterations">Learn More</button>
+              <a href="booking.html?service=Alterations%20%26%20Restyling" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 5: Festive & Bridal Wear -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <span class="service-badge">Couture</span>
+            </div>
+            <h3 class="service-title">Festive &amp; Bridal Wear</h3>
+            <p class="service-desc">Your most monumental milestones deserve regal fabrics, opulent embroidery, and perfection.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Complete Bridal Trousseau Design</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Handcrafted Zari &amp; Maggam Work</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Coordinated Wedding Outfits</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="bridal">Learn More</button>
+              <a href="booking.html?service=Festive%20%26%20Bridal%20Wear" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 6: Design Consultation -->
+          <div class="service-card reveal">
+            <div class="service-card-header">
+              <div class="service-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <span class="service-badge">Personalized</span>
+            </div>
+            <h3 class="service-title">Design Consultation</h3>
+            <p class="service-desc">Expert 1-on-1 styling guidance to help you select designs that flatter your posture and silhouette.</p>
+            <ul class="service-spec-list">
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Neckline &amp; Sleeve Pairing Advice</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Fabric Fall &amp; Draping Analysis</span>
+              </li>
+              <li class="service-spec-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom Body Measurement Charting</span>
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <button type="button" class="btn btn-outline btn-sm service-learn-more-btn" data-service="consultation">Learn More</button>
+              <a href="booking.html?service=Design%20Consultation" class="text-gold" style="font-weight:600;font-size:0.85rem;">Book Service &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. WHY CHOOSE US ("The Tejas Difference")
+         ====================================================================== -->
+    <section class="section-pad why-section" id="why">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">The <em>Tejas</em> Difference</h2>
+          <p class="section-subtitle">
+            What makes our boutique special is our relentless commitment to the craft. We don't cut corners, rush fittings, or deliver anything less than perfection.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>Perfect Measurements</h3>
+            <p>We take 18+ individual bodily reference points to ensure your blouse or dress fits you like a second skin.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>Custom Designs</h3>
+            <p>Every woman has a unique aesthetic. From delicate embroidery motifs to modern neck cuts, your ideas come to life.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Quality Stitching</h3>
+            <p>Durable double-stitched seams, high-grade lining materials, and professional serging guarantee long-lasting garments.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Premium Finishing</h3>
+            <p>Concealed zippers, hand-stitched hooks, custom fabric piping, and matching latkans make your attire look couture.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg>
+            </div>
+            <h3>On-Time Delivery</h3>
+            <p>We honor your celebrations. Your outfits are ready on or before your promised delivery date, every single time.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3>Personalized Service</h3>
+            <p>Warm, attentive care from our master tailor with dedicated trial fittings to guarantee 100% satisfaction.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. HOW IT WORKS (Timeline: Horizontal Desktop, Vertical Mobile)
+         ====================================================================== -->
+    <section class="section-pad how-section" id="how">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Seamless Atelier Process</span>
+          <h2 class="section-title">How It <em>Works</em></h2>
+          <p class="section-subtitle">
+            A refined 5-step journey from raw fabric to your dream bespoke outfit.
+          </p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Step 01 -->
+          <div class="timeline-step reveal">
+            <div class="timeline-step-marker">01</div>
+            <div>
+              <h3>Consultation</h3>
+              <p>Discuss your vision, browse our lookbooks, and select necklines, sleeves, and embellishments.</p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="timeline-step reveal">
+            <div class="timeline-step-marker">02</div>
+            <div>
+              <h3>Measurements</h3>
+              <p>Accurate, posture-aware bodily measurements taken by our expert tailor to guarantee a flawless drape.</p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="timeline-step reveal">
+            <div class="timeline-step-marker">03</div>
+            <div>
+              <h3>Design &amp; Stitching</h3>
+              <p>Master pattern cutting, precision assembly, premium lining insertion, and hand embroidery work.</p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="timeline-step reveal">
+            <div class="timeline-step-marker">04</div>
+            <div>
+              <h3>Fitting Trial</h3>
+              <p>Try on your custom garment at our boutique. We fine-tune any micro-adjustments for total comfort.</p>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="timeline-step reveal">
+            <div class="timeline-step-marker">05</div>
+            <div>
+              <h3>Final Delivery</h3>
+              <p>Receive your pressed, beautifully packaged, showroom-ready outfit, ready to make you shine.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. GALLERY SECTION (Ladies Fashion & Lightbox)
+         ====================================================================== -->
+    <section class="section-pad gallery-section" id="gallery">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio of Creations</span>
+          <h2 class="section-title">Our <em>Atelier Gallery</em></h2>
+          <p class="section-subtitle">
+            Glimpses into our custom-stitched sarees, bridal blouses, flared lehengas, and handcrafted ethnic wear. Click any image to view in high definition.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="gallery-filter-bar reveal">
+          <button type="button" class="gallery-filter-btn active" data-filter="all">All Creations</button>
+          <button type="button" class="gallery-filter-btn" data-filter="blouse">Designer Blouses</button>
+          <button type="button" class="gallery-filter-btn" data-filter="bridal">Bridal &amp; Lehengas</button>
+          <button type="button" class="gallery-filter-btn" data-filter="ethnic">Ethnic Wear</button>
+          <button type="button" class="gallery-filter-btn" data-filter="western">Fusion &amp; Gowns</button>
+        </div>
+
+        <!-- Responsive Image Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <div class="gallery-item reveal" data-category="bridal">
+            <img 
+              src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80" 
+              alt="Hand-embroidered crimson bridal lehenga with heavy zari work" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Bridal Couture</span>
+              <h4 class="gallery-item-title">Royal Zardozi Lehenga</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="blouse">
+            <img 
+              src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80" 
+              alt="Bespoke silk saree blouse with deep back and hand-embroidered borders" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Designer Blouse</span>
+              <h4 class="gallery-item-title">Emerald Silk Cutwork Blouse</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="ethnic">
+            <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy7vEKUlQW9VnkMnN5BqoYEkiifIPk5Tv8v0OMxA90EzOudGTv0IzHbOI&s=10" 
+              alt="Floor length Anarkali suit with gold foil printing and tailored waist" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Ethnic Wear</span>
+              <h4 class="gallery-item-title">Bespoke Flared Anarkali</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="blouse">
+            <img 
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUPRg2mMNx2rslWqiMZU3hBApaZa_Pf6yxvtFF90gJ7aftG4DFUN-L8Q&s=10" 
+              alt="Delicate beadwork and sequin embroidery on sheer neck fabric" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Detailing</span>
+              <h4 class="gallery-item-title">Maggam Needlecraft Blouse</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="western">
+            <img 
+              src="https://girlsfashionideas.com/wp-content/uploads/2023/06/Stylish-Frill-Blouse-Design9.jpg" 
+              alt="Elegant evening maxi gown with tailored torso and flowing silk fall" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Fusion Couture</span>
+              <h4 class="gallery-item-title">Sapphire Cocktail Gown</h4>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal" data-category="western">
+            <img 
+              src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/hand-embroidery-blouse-design-for-women-1772432313-8166.jpg" 
+              alt="Modern tailored trousers and fusion crop jacket" 
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-item-tag">Contemporary</span>
+              <h4 class="gallery-item-title">Tailored Silhouette Ensemble</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. CUSTOMER REVIEWS (Interactive Slider / Carousel)
+         ====================================================================== -->
+    <section class="section-pad reviews-section" id="reviews">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Words from Our Patrons</span>
+          <h2 class="section-title">Loved by <em>Our Clients</em></h2>
+          <p class="section-subtitle">
+            Read real experiences from women who trust TEJAS LADIES TYLOR for their most special moments and daily elegance.
+          </p>
+        </div>
+
+        <div class="reviews-slider-container reveal">
+          <div class="reviews-track">
+            
+            <!-- Review 1 -->
+            <div class="review-card">
+              <div class="review-stars">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="review-quote">
+                "Finding a tailor who understands how a blouse should sit without painful shoulder slipping was impossible until I met TEJAS LADIES TYLOR. The fitting on my Kanchipuram silk saree blouse was absolutely immaculate!"
+              </p>
+              <div class="review-author">
+                <span class="review-author-name">Ananya Venkatesh</span>
+                <span class="review-author-meta">Bridal Blouse &bull; Bangalore</span>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+              <div class="review-stars">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="review-quote">
+                "Their on-time delivery promise is 100% genuine. I had a wedding in 4 days and needed two heavy Anarkali suits stitched urgently. Not only did they finish on time, the finishing and can-can flare were breathtaking."
+              </p>
+              <div class="review-author">
+                <span class="review-author-name">Deepika Rao</span>
+                <span class="review-author-meta">Wedding Anarkali &bull; Electronic City</span>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+              <div class="review-stars">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="review-quote">
+                "The design consultation was wonderful! They guided me on the right boat neckline that suited my collarbone and suggested adding gold potli buttons. You can tell they take genuine pride in every single stitch."
+              </p>
+              <div class="review-author">
+                <span class="review-author-name">Meera Nair</span>
+                <span class="review-author-meta">Festive Kurtis &bull; Regular Client</span>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card">
+              <div class="review-stars">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+              <p class="review-quote">
+                "I brought my mother’s vintage silk saree to restyle into an Indo-western lehenga. They treated the heirloom fabric with incredible care. The result was so modern yet sentimental. Highly recommend TEJAS LADIES TYLOR!"
+              </p>
+              <div class="review-author">
+                <span class="review-author-name">Kavitha Sundaram</span>
+                <span class="review-author-meta">Wardrobe Restyling &bull; Bangalore</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="slider-controls">
+            <button type="button" class="slider-btn" id="prevReviewBtn" aria-label="Previous review">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="slider-dots"></div>
+            <button type="button" class="slider-btn" id="nextReviewBtn" aria-label="Next review">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. APPOINTMENT CTA SECTION
+         ====================================================================== -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Ready for Your Perfect Fit?</h2>
+          <p>
+            Book an appointment with TEJAS LADIES TYLOR and let us create something made especially for you. Step into our boutique for personalized styling and master measurement trials.
+          </p>
+          <div class="cta-banner-buttons">
+            <a href="booking.html" class="btn btn-gold" id="bannerBookBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Book an Appointment</span>
+            </a>
+            <a href="tel:+919380224737" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:#fff;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call Us: +91 93802 24737</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         19. CONTACT SECTION (Cards, Interactive Map, Action Buttons)
+         ====================================================================== -->
+    <section class="section-pad contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Visit Our Atelier</span>
+          <h2 class="section-title">Get in <em>Touch</em></h2>
+          <p class="section-subtitle">
+            Have questions about a design or ready to plan your bridal trousseau? Reach out directly or visit our boutique.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Cards & Quick Inquiry -->
+          <div class="reveal">
+            <div class="contact-cards-grid">
+              
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <h4>Phone Consultation</h4>
+                <p><a href="tel:+919380224737">+91 93802 24737</a></p>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Available for calls &amp; WhatsApp</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <h4>Email Inquiries</h4>
+                <p><a href="mailto:tstejas48@gmail.com">tstejas48@gmail.com</a></p>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Responses within 24 hours</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <h4>Opening Hours</h4>
+                <p>Mon – Sat: 10:00 AM – 8:00 PM</p>
+                <span style="font-size:0.75rem;color:var(--danger);margin-top:4px;font-weight:600;">Sunday: Closed</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h4>Boutique Location</h4>
+                <p>Electronic City, Bangalore</p>
+                <span style="font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Karnataka, India</span>
+              </div>
+
+            </div>
+
+            <!-- Direct Action Buttons Required -->
+            <div class="contact-action-bar">
+              <a href="tel:+919380224737" class="btn btn-primary" id="callNowBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Call Now</span>
+              </a>
+              <a href="mailto:tstejas48@gmail.com" class="btn btn-outline" id="emailUsBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Email Us</span>
+              </a>
+              <a href="https://maps.app.goo.gl/mr7mpxmPkPioPkHG7" target="_blank" rel="noopener" class="btn btn-outline" id="getDirectionsBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                <span>Get Directions</span>
+              </a>
+            </div>
+
+            <!-- Quick Inquiry Form -->
+            <div style="margin-top:2.2rem;background:var(--bg-surface);padding:1.8rem;border-radius:var(--radius-md);border:1px solid var(--border-color);">
+              <h4 style="margin-bottom:1rem;font-size:1.1rem;">Quick Inquiry</h4>
+              <form id="quickContactForm">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+                  <input type="text" id="contactName" class="form-input" placeholder="Your Name" required>
+                  <input type="tel" id="contactPhone" class="form-input" placeholder="Phone Number" required>
+                </div>
+                <div style="margin-bottom:1rem;">
+                  <textarea id="contactMsg" class="form-textarea" rows="2" placeholder="Tell us about what outfit you'd like stitched..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Send Inquiry</button>
+              </form>
+            </div>
+
+          </div>
+
+          <!-- Right: Google Maps Area -->
+          <div class="reveal">
+            <div class="map-container">
+              <iframe 
+                title="TEJAS LADIES TYLOR Location Map"
+                src="https://maps.google.com/maps?q=Electronic%20City,%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       20. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Column 1: Brand -->
+        <div class="footer-brand">
+          <h2>TEJAS <span>LADIES TYLOR</span></h2>
+          <p>
+            Professional ladies custom tailoring where master craftsmanship meets your unique silhouette. Every stitch made with love and precision.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Instagram" title="Follow on Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook" title="Follow on Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://wa.me/919380224737" class="footer-social-btn" aria-label="WhatsApp" title="Chat on WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#why">The Tejas Difference</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Client Services -->
+        <div class="footer-col">
+          <h4>Client Portal</h4>
+          <ul class="footer-nav-list">
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="appointments.html">My Appointments</a></li>
+            <li><a href="profile.html">My Account</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="#contact">Contact Boutique</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Snippet -->
+        <div class="footer-col">
+          <h4>Boutique Info</h4>
+          <div class="footer-contact-snippet">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 93802 24737</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>tstejas48@gmail.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Mon – Sat: 10:00 AM – 8:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Electronic City, Bangalore</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
+        <span>Crafted with passion for women's bespoke fashion.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL FOR GALLERY
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image Preview">
+    <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+    <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="" alt="Enlarged tailoring photo">
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <button type="button" class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <!-- ========================================================================
+       SERVICE DETAILS POPUP MODAL (Triggered by "Learn More" buttons)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="serviceDetailsModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" id="serviceModalClose" aria-label="Close modal">&times;</button>
+      <span class="service-badge" id="serviceModalBadge" style="display:inline-block;margin-bottom:0.5rem;">Signature Craft</span>
+      <h3 id="serviceModalTitle" style="margin-bottom:1rem;">Service Name</h3>
+      <p id="serviceModalDesc" style="margin-bottom:1.5rem;font-size:0.95rem;color:var(--text-secondary);"></p>
+      
+      <h4 style="font-size:0.92rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-primary);margin-bottom:0.75rem;">Specialties Included</h4>
+      <ul id="serviceModalFeatures" class="service-spec-list" style="margin-bottom:1.5rem;"></ul>
+
+      <div style="background:var(--bg-surface-alt);padding:1rem;border-radius:var(--radius-sm);margin-bottom:1.8rem;">
+        <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:0.25rem;">Estimated Turnaround</span>
+        <span id="serviceModalTurnaround" style="font-size:0.92rem;font-weight:600;color:var(--accent-primary);">Standard: 3–5 days</span>
+      </div>
+
+      <a href="booking.html" class="btn btn-primary btn-block" id="serviceModalBookBtn">Book This Service Now</a>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript Dependencies (No frameworks, pure JS) -->
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

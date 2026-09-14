@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile &amp; Measurements — TEJAS LADIES TYLOR</title>
+  <meta name="description" content="View and update your personal tailoring measurements and profile at TEJAS LADIES TYLOR.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235C1826'><path d='M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Navbar -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">TEJAS LADIES TYLOR</span>
+          <span class="brand-tagline">Bespoke Boutique &amp; Craftsmanship</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="booking.html" class="nav-link">Book Appointment</a></li>
+          <li><a href="appointments.html" class="nav-link">My Appointments</a></li>
+          <li><a href="profile.html" class="nav-link active">My Profile</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <div class="auth-group">
+            <!-- Populated dynamically by main.js / auth.js -->
+          </div>
+
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top:110px;padding-bottom:5rem;">
+    <div class="container">
+      
+      <!-- Profile Header Banner -->
+      <div class="profile-header-card">
+        <div class="profile-avatar" id="avatarInitial">P</div>
+        <div class="profile-user-info">
+          <span class="service-badge" id="clientIdBadge">Client ID: USR-2026-001</span>
+          <h1 id="userFullNameHeading" style="font-size:1.8rem;margin:0.25rem 0;">Priya Sharma</h1>
+          <p id="userEmailPara" style="color:var(--text-secondary);font-size:0.92rem;margin:0;">priya@example.com &bull; +91 98765 43210</p>
+        </div>
+        <div class="profile-actions">
+          <a href="appointments.html" class="btn btn-outline btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>My Appointments</span>
+          </a>
+          <a href="booking.html" class="btn btn-primary btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span>Book New Fitting</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Profile Grid -->
+      <div class="profile-grid">
+        
+        <!-- Left: Measurements Form -->
+        <div class="profile-measurements-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">
+            <div>
+              <h2 style="font-size:1.4rem;margin:0;">Custom Measurements</h2>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin:0.2rem 0 0;">
+                Saved for quick drafting and custom pattern creation at our atelier.
+              </p>
+            </div>
+            <span class="appointment-badge">Inches (&Prime;)</span>
+          </div>
+
+          <form id="measurementsForm">
+            <div class="measurements-grid">
+              
+              <div class="form-group">
+                <label for="mBust" class="form-label">Bust / Chest (&Prime;)</label>
+                <input type="text" id="mBust" class="form-input" placeholder="e.g. 36">
+              </div>
+
+              <div class="form-group">
+                <label for="mWaist" class="form-label">Waist (&Prime;)</label>
+                <input type="text" id="mWaist" class="form-input" placeholder="e.g. 30">
+              </div>
+
+              <div class="form-group">
+                <label for="mHips" class="form-label">Hips (&Prime;)</label>
+                <input type="text" id="mHips" class="form-input" placeholder="e.g. 39">
+              </div>
+
+              <div class="form-group">
+                <label for="mShoulder" class="form-label">Shoulder Width (&Prime;)</label>
+                <input type="text" id="mShoulder" class="form-input" placeholder="e.g. 14.5">
+              </div>
+
+              <div class="form-group">
+                <label for="mBlouseLen" class="form-label">Blouse Length (&Prime;)</label>
+                <input type="text" id="mBlouseLen" class="form-input" placeholder="e.g. 14">
+              </div>
+
+              <div class="form-group">
+                <label for="mKurtiLen" class="form-label">Kurti Length (&Prime;)</label>
+                <input type="text" id="mKurtiLen" class="form-input" placeholder="e.g. 42">
+              </div>
+
+              <div class="form-group">
+                <label for="mSleeveLen" class="form-label">Sleeve Length (&Prime;)</label>
+                <input type="text" id="mSleeveLen" class="form-input" placeholder="e.g. 10">
+              </div>
+
+              <div class="form-group">
+                <label for="mArmhole" class="form-label">Armhole Round (&Prime;)</label>
+                <input type="text" id="mArmhole" class="form-input" placeholder="e.g. 16">
+              </div>
+
+            </div>
+
+            <div class="form-group" style="margin-top:1.2rem;">
+              <label for="mNotes" class="form-label">Tailoring Notes &amp; Fit Preferences</label>
+              <textarea id="mNotes" class="form-textarea" rows="3" placeholder="e.g. Prefers deep back necklines with latkan ties, snug armholes, soft lining for silk sarees..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="saveMeasurementsBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+              <span>Save Measurements</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Account Details & Security -->
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          
+          <!-- Basic Info Form -->
+          <div style="background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.8rem;">
+            <h3 style="font-size:1.2rem;margin-bottom:1.2rem;">Personal Details</h3>
+            <form id="personalInfoForm">
+              <div class="form-group">
+                <label for="profName" class="form-label">Full Name</label>
+                <input type="text" id="profName" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="profPhone" class="form-label">Phone Number</label>
+                <input type="tel" id="profPhone" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="profEmail" class="form-label">Email (Read Only)</label>
+                <input type="email" id="profEmail" class="form-input" readonly style="opacity:0.75;background:var(--bg-surface-alt);">
+              </div>
+
+              <button type="submit" class="btn btn-outline btn-sm" id="savePersonalBtn">
+                Update Info
+              </button>
+            </form>
+          </div>
+
+          <!-- Quick Navigation Card -->
+          <div style="background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.8rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:1rem;">Atelier Actions</h3>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;padding:0;margin:0;">
+              <li>
+                <a href="appointments.html" style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;background:var(--bg-surface-alt);border-radius:var(--radius-sm);color:var(--text-primary);text-decoration:none;font-size:0.9rem;">
+                  <span>Manage My Appointments</span>
+                  <span class="text-gold">&rarr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="booking.html" style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;background:var(--bg-surface-alt);border-radius:var(--radius-sm);color:var(--text-primary);text-decoration:none;font-size:0.9rem;">
+                  <span>Book a Fitting Trial</span>
+                  <span class="text-gold">&rarr;</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#services" style="display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0.8rem;background:var(--bg-surface-alt);border-radius:var(--radius-sm);color:var(--text-primary);text-decoration:none;font-size:0.9rem;">
+                  <span>Explore Tailoring Catalog</span>
+                  <span class="text-gold">&rarr;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
+        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Require authentication
+      if (!window.TLT_AUTH || !window.TLT_AUTH.isLoggedIn()) {
+        window.TLT_AUTH.requireAuth('login.html');
+        return;
+      }
+
+      const user = window.TLT_AUTH.getCurrentUser();
+      if (!user) return;
+
+      // Populate user info
+      document.getElementById('avatarInitial').textContent = (user.fullName || 'U').charAt(0).toUpperCase();
+      document.getElementById('clientIdBadge').textContent = `Client ID: ${user.id || 'USR-2026-001'}`;
+      document.getElementById('userFullNameHeading').textContent = user.fullName || 'Client';
+      document.getElementById('userEmailPara').textContent = `${user.email} • ${user.phone || 'No phone'}`;
+      
+      document.getElementById('profName').value = user.fullName || '';
+      document.getElementById('profPhone').value = user.phone || '';
+      document.getElementById('profEmail').value = user.email || '';
+
+      // Populate measurements
+      const m = user.measurements || {};
+      if (m.bust) document.getElementById('mBust').value = m.bust;
+      if (m.waist) document.getElementById('mWaist').value = m.waist;
+      if (m.hips) document.getElementById('mHips').value = m.hips;
+      if (m.shoulder) document.getElementById('mShoulder').value = m.shoulder;
+      if (m.blouseLength) document.getElementById('mBlouseLen').value = m.blouseLength;
+      if (m.kurtiLength) document.getElementById('mKurtiLen').value = m.kurtiLength;
+      if (m.sleeveLength) document.getElementById('mSleeveLen').value = m.sleeveLength;
+      if (m.armhole) document.getElementById('mArmhole').value = m.armhole;
+      if (user.notes) document.getElementById('mNotes').value = user.notes;
+
+      // Save measurements form
+      document.getElementById('measurementsForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const updatedMeasurements = {
+          bust: document.getElementById('mBust').value.trim(),
+          waist: document.getElementById('mWaist').value.trim(),
+          hips: document.getElementById('mHips').value.trim(),
+          shoulder: document.getElementById('mShoulder').value.trim(),
+          blouseLength: document.getElementById('mBlouseLen').value.trim(),
+          kurtiLength: document.getElementById('mKurtiLen').value.trim(),
+          sleeveLength: document.getElementById('mSleeveLen').value.trim(),
+          armhole: document.getElementById('mArmhole').value.trim()
+        };
+        const notes = document.getElementById('mNotes').value.trim();
+
+        window.TLT_AUTH.updateUserProfile({
+          measurements: updatedMeasurements,
+          notes
+        });
+
+        window.showToast('Measurements saved successfully to your atelier profile!', 'success');
+      });
+
+      // Save personal info form
+      document.getElementById('personalInfoForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fullName = document.getElementById('profName').value.trim();
+        const phone = document.getElementById('profPhone').value.trim();
+
+        if (!fullName || !phone) {
+          window.showToast('Name and phone cannot be empty.', 'error');
+          return;
+        }
+
+        window.TLT_AUTH.updateUserProfile({ fullName, phone });
+        document.getElementById('userFullNameHeading').textContent = fullName;
+        document.getElementById('userEmailPara').textContent = `${user.email} • ${phone}`;
+        document.getElementById('avatarInitial').textContent = fullName.charAt(0).toUpperCase();
+
+        window.showToast('Personal profile updated!', 'success');
+      });
+    });
+  </script>
+</body>
+</html>

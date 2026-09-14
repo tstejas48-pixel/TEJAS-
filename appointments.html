@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Appointments — TEJAS LADIES TYLOR</title>
+  <meta name="description" content="View and manage your upcoming tailoring consultations and fitting trials at TEJAS LADIES TYLOR.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235C1826'><path d='M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Sticky Navbar -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">TEJAS LADIES TYLOR</span>
+          <span class="brand-tagline">Bespoke Boutique &amp; Craftsmanship</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="booking.html" class="nav-link">Book Appointment</a></li>
+          <li><a href="appointments.html" class="nav-link active">My Appointments</a></li>
+          <li><a href="profile.html" class="nav-link">My Profile</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <div class="auth-group">
+            <!-- Populated dynamically by main.js / auth.js -->
+          </div>
+
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top:110px;padding-bottom:5rem;">
+    <div class="container">
+      
+      <!-- Header with Action -->
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+          <span class="section-tag">Atelier Schedule</span>
+          <h1 style="font-size:2rem;margin:0.25rem 0;">My <em>Appointments</em></h1>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin:0;">
+            Track your consultations, fitting trials, and garment deliveries.
+          </p>
+        </div>
+
+        <a href="booking.html" class="btn btn-primary" id="newBookingBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>Book New Appointment</span>
+        </a>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="gallery-filter-bar" style="justify-content:flex-start;margin-bottom:2rem;">
+        <button type="button" class="gallery-filter-btn active" data-status="all">All Appointments (<span id="countAll">0</span>)</button>
+        <button type="button" class="gallery-filter-btn" data-status="Confirmed">Confirmed (<span id="countConfirmed">0</span>)</button>
+        <button type="button" class="gallery-filter-btn" data-status="Cancelled">Cancelled (<span id="countCancelled">0</span>)</button>
+      </div>
+
+      <!-- Appointments List Container -->
+      <div class="appointments-list" id="appointmentsList">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="appointments-empty" id="emptyState" style="display:none;">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--bg-surface-alt);border:1px solid var(--border-color);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:var(--accent-primary);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <h3 style="font-size:1.4rem;margin-bottom:0.5rem;">No Appointments Scheduled</h3>
+        <p style="color:var(--text-secondary);max-width:420px;margin:0 auto 1.5rem;font-size:0.92rem;">
+          You do not have any active appointments under this category. Schedule a fitting session with our master tailor today.
+        </p>
+        <a href="booking.html" class="btn btn-primary">Book Your First Appointment</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
+        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const listContainer = document.getElementById('appointmentsList');
+      const emptyState = document.getElementById('emptyState');
+      const countAllEl = document.getElementById('countAll');
+      const countConfirmedEl = document.getElementById('countConfirmed');
+      const countCancelledEl = document.getElementById('countCancelled');
+
+      let currentFilter = 'all';
+
+      function renderAppointments() {
+        const user = window.TLT_AUTH ? window.TLT_AUTH.getCurrentUser() : null;
+        const userEmail = user ? user.email : '';
+        
+        // Fetch appointments
+        const all = window.TLT_BOOKING.getUserAppointments(userEmail);
+
+        // Update counts
+        const confirmedCount = all.filter(a => a.status === 'Confirmed').length;
+        const cancelledCount = all.filter(a => a.status === 'Cancelled').length;
+
+        countAllEl.textContent = all.length;
+        countConfirmedEl.textContent = confirmedCount;
+        countCancelledEl.textContent = cancelledCount;
+
+        const filtered = all.filter(a => {
+          if (currentFilter === 'all') return true;
+          return a.status === currentFilter;
+        });
+
+        if (filtered.length === 0) {
+          listContainer.innerHTML = '';
+          emptyState.style.display = 'block';
+          return;
+        }
+
+        emptyState.style.display = 'none';
+        listContainer.innerHTML = '';
+
+        filtered.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'appointment-card';
+
+          const isCancelled = item.status === 'Cancelled';
+          const badgeClass = isCancelled ? 'status-cancelled' : 'status-confirmed';
+
+          card.innerHTML = `
+            <div class="appointment-card-header">
+              <div>
+                <span class="appointment-id-badge">${item.id}</span>
+                <h3 class="appointment-service-title">${item.service}</h3>
+                <span style="font-size:0.8rem;color:var(--text-muted);">Booked on ${item.createdAt || 'Recent'}</span>
+              </div>
+              <div>
+                <span class="appointment-badge ${badgeClass}">${item.status}</span>
+              </div>
+            </div>
+
+            <div class="appointment-details-grid">
+              <div class="appointment-meta-item">
+                <span class="meta-label">Date</span>
+                <span class="meta-val">${item.date}</span>
+              </div>
+              <div class="appointment-meta-item">
+                <span class="meta-label">Time Slot</span>
+                <span class="meta-val">${item.time}</span>
+              </div>
+              <div class="appointment-meta-item">
+                <span class="meta-label">Client Name</span>
+                <span class="meta-val">${item.fullName}</span>
+              </div>
+              <div class="appointment-meta-item">
+                <span class="meta-label">Contact</span>
+                <span class="meta-val">${item.phone}</span>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface-alt);padding:0.9rem;border-radius:var(--radius-sm);margin-bottom:1rem;font-size:0.86rem;">
+              <span style="display:block;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.25rem;">Outfit Notes &amp; Requests</span>
+              <p style="margin:0;color:var(--text-secondary);">${item.requirements || 'No special requirements listed.'}</p>
+            </div>
+
+            <div class="appointment-card-actions">
+              ${!isCancelled ? `
+                <button type="button" class="btn btn-outline btn-sm btn-cancel-appt" data-id="${item.id}" style="color:var(--danger);border-color:rgba(198,40,40,0.3);">
+                  Cancel Appointment
+                </button>
+              ` : `
+                <span style="font-size:0.84rem;color:var(--danger);font-style:italic;">Appointment Cancelled</span>
+              `}
+              <a href="booking.html?service=${encodeURIComponent(item.service)}" class="btn btn-outline btn-sm">
+                Reschedule / Book Again
+              </a>
+            </div>
+          `;
+
+          listContainer.appendChild(card);
+        });
+
+        // Attach cancel listeners
+        document.querySelectorAll('.btn-cancel-appt').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id = btn.getAttribute('data-id');
+            if (confirm(`Are you sure you want to cancel appointment ${id}?`)) {
+              window.TLT_BOOKING.cancelAppointment(id);
+              window.showToast(`Appointment ${id} has been cancelled.`, 'info');
+              renderAppointments();
+            }
+          });
+        });
+      }
+
+      // Filter tabs listener
+      document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.getAttribute('data-status');
+          renderAppointments();
+        });
+      });
+
+      renderAppointments();
+    });
+  </script>
+</body>
+</html>

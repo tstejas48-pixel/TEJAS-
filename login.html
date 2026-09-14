@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — TEJAS LADIES TYLOR</title>
+  <meta name="description" content="Sign in to your TEJAS LADIES TYLOR customer account to manage appointments and measurements.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235C1826'><path d='M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8Z'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar" id="mainNavbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">TEJAS LADIES TYLOR</span>
+          <span class="brand-tagline">Bespoke Boutique &amp; Craftsmanship</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="booking.html" class="nav-link">Book Appointment</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+
+          <div class="auth-group">
+            <a href="login.html" class="btn btn-outline btn-sm active">Login</a>
+            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+          </div>
+
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-page-wrapper">
+    <div class="auth-card">
+      
+      <!-- Brand & Header -->
+      <div class="auth-card-header">
+        <span class="section-tag">Client Portal</span>
+        <h1 style="font-size:1.8rem;margin:0.5rem 0;">Welcome Back</h1>
+        <p style="color:var(--text-secondary);font-size:0.9rem;">
+          Sign in to view your tailored orders, measurements, and appointment schedule.
+        </p>
+      </div>
+
+      <!-- Quick 1-Click Demo Login Banner -->
+      <div class="demo-auth-banner">
+        <div>
+          <strong>Try Instant Demo Account:</strong><br>
+          <span>priya@example.com / Password123!</span>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="fillDemoBtn" style="white-space:nowrap;font-size:0.78rem;">
+          Fill Demo
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" novalidate>
+        
+        <div class="form-group" id="groupLoginEmail">
+          <label for="loginEmail" class="form-label">Email Address</label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" required autocomplete="email">
+          <span class="form-error-msg" id="errLoginEmail">Please enter your email address.</span>
+        </div>
+
+        <div class="form-group" id="groupLoginPassword">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <label for="loginPassword" class="form-label">Password</label>
+            <a href="#" id="forgotPasswordLink" style="font-size:0.8rem;color:var(--accent-primary);text-decoration:none;">Forgot Password?</a>
+          </div>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+          <span class="form-error-msg" id="errLoginPassword">Please enter your password.</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;font-size:0.88rem;color:var(--text-secondary);">
+          <input type="checkbox" id="rememberMeCheckbox" style="accent-color:var(--accent-primary);cursor:pointer;">
+          <label for="rememberMeCheckbox" style="cursor:pointer;">Remember my email on this device</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitLoginBtn">
+          <span>Sign In to Account</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <div class="auth-divider"><span>or</span></div>
+        <button type="button" class="btn btn-outline btn-block google-auth-btn" id="googleLoginBtn">
+          <span class="google-mark" aria-hidden="true">G</span>
+          <span>Continue with Google</span>
+        </button>
+
+      </form>
+
+      <div class="auth-card-footer">
+        Don't have an atelier account yet? <a href="register.html">Register here</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
+        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.min.js"></script>
+  <script src="js/google-auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const emailInput = document.getElementById('loginEmail');
+      const passwordInput = document.getElementById('loginPassword');
+      const rememberCheckbox = document.getElementById('rememberMeCheckbox');
+      const form = document.getElementById('loginForm');
+      const fillDemoBtn = document.getElementById('fillDemoBtn');
+
+      // Pre-fill remembered email
+      if (window.TLT_AUTH) {
+        const remembered = window.TLT_AUTH.getRememberedEmail();
+        if (remembered) {
+          emailInput.value = remembered;
+          rememberCheckbox.checked = true;
+        }
+
+        // If already logged in, show status
+        if (window.TLT_AUTH.isLoggedIn()) {
+          const user = window.TLT_AUTH.getCurrentUser();
+          window.showToast(`Already logged in as ${user.fullName}. Redirecting to Profile...`, 'info');
+          setTimeout(() => {
+            window.location.href = 'profile.html';
+          }, 1200);
+        }
+      }
+
+      // Demo autofill click
+      fillDemoBtn.addEventListener('click', () => {
+        emailInput.value = 'priya@example.com';
+        passwordInput.value = 'Password123!';
+        window.showToast('Demo credentials populated. Click "Sign In"!', 'info');
+      });
+
+      // Forgot password demo handler
+      document.getElementById('forgotPasswordLink').addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email) {
+          window.showToast('Please enter your email address above to reset password.', 'error');
+        } else {
+          window.showToast(`Password reset link sent to ${email} (simulated for demo).`, 'info');
+        }
+      });
+
+      // Submit Login
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        const remember = rememberCheckbox.checked;
+
+        let isValid = true;
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
+
+        if (!email) {
+          document.getElementById('groupLoginEmail').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!password) {
+          document.getElementById('groupLoginPassword').classList.add('has-error');
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        const res = window.TLT_AUTH.loginUser(email, password, remember);
+        if (res.success) {
+          window.showToast(res.message, 'success');
+          
+          // Determine redirect URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const returnUrl = urlParams.get('returnUrl') || 'profile.html';
+          
+          setTimeout(() => {
+            window.location.href = decodeURIComponent(returnUrl);
+          }, 800);
+        } else {
+          window.showToast(res.message, 'error');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
