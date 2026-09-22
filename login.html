@@ -120,13 +120,14 @@
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
         <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
-        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+        <span>Talakad, Mysore, Karnataka &bull; +91 93802 24737</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/auth.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
   <script src="js/google-auth.js"></script>
   <script src="js/booking.js"></script>
   <script src="js/main.js"></script>
@@ -176,7 +177,7 @@
       });
 
       // Submit Login
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = emailInput.value.trim();
         const password = passwordInput.value;
@@ -197,7 +198,7 @@
 
         if (!isValid) return;
 
-        const res = window.TLT_AUTH.loginUser(email, password, remember);
+        const res = await window.TLT_AUTH.loginUser(email, password, remember);
         if (res.success) {
           window.showToast(res.message, 'success');
           

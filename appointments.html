@@ -100,11 +100,13 @@
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
         <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
-        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+        <span>Talakad, Mysore, Karnataka &bull; +91 93802 24737</span>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/booking.js"></script>
   <script src="js/main.js"></script>
@@ -119,12 +121,12 @@
 
       let currentFilter = 'all';
 
-      function renderAppointments() {
+      async function renderAppointments() {
         const user = window.TLT_AUTH ? window.TLT_AUTH.getCurrentUser() : null;
         const userEmail = user ? user.email : '';
         
         // Fetch appointments
-        const all = window.TLT_BOOKING.getUserAppointments(userEmail);
+        const all = await window.TLT_BOOKING.getUserAppointments(userEmail);
 
         // Update counts
         const confirmedCount = all.filter(a => a.status === 'Confirmed').length;
@@ -213,7 +215,7 @@
           btn.addEventListener('click', () => {
             const id = btn.getAttribute('data-id');
             if (confirm(`Are you sure you want to cancel appointment ${id}?`)) {
-              window.TLT_BOOKING.cancelAppointment(id);
+              await window.TLT_BOOKING.cancelAppointment(id);
               window.showToast(`Appointment ${id} has been cancelled.`, 'info');
               renderAppointments();
             }

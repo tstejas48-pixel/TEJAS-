@@ -83,7 +83,7 @@
    * @param {Object} userData - { fullName, email, phone, password }
    * @returns {Object} { success: boolean, message: string, user?: Object }
    */
-  function registerUser(userData) {
+  function registerLocalUser(userData) {
     const users = getAllUsers();
     const cleanEmail = (userData.email || '').trim().toLowerCase();
 
@@ -120,7 +120,7 @@
     saveAllUsers(users);
 
     // Automatically log in the newly registered user
-    loginUser(cleanEmail, userData.password, true);
+    loginLocalUser(cleanEmail, userData.password, true);
 
     return {
       success: true,
@@ -136,7 +136,7 @@
    * @param {boolean} remember
    * @returns {Object} { success: boolean, message: string, user?: Object }
    */
-  function loginUser(email, password, remember = false) {
+  function loginLocalUser(email, password, remember = false) {
     const users = getAllUsers();
     const cleanEmail = (email || '').trim().toLowerCase();
     const user = users.find(u => u.email.toLowerCase() === cleanEmail);
@@ -224,9 +224,11 @@
   /**
    * Log out the current user session
    */
-  function logoutUser() {
+  async function logoutUser() {
     try {
       localStorage.removeItem(STORAGE_CURRENT_USER_KEY);
+      const client = await global.TLT_SUPABASE?.getClient?.();
+      if (client) await client.auth.signOut();
     } catch (e) {
       console.error('Logout error:', e);
     }
@@ -269,7 +271,7 @@
    * @param {Object} updatedFields
    * @returns {boolean}
    */
-  function updateUserProfile(updatedFields) {
+  function updateLocalUserProfile(updatedFields) {
     const current = getCurrentUser();
     if (!current) return false;
 
@@ -305,6 +307,111 @@
       console.error('Error updating session user:', e);
     }
 
+    return true;
+  }
+
+  async function getSupabaseProfile(authUser) {
+    const client = await global.TLT_SUPABASE?.getClient?.();
+    if (!client || !authUser?.id) return null;
+
+    const { data: profile } = await client
+      .from('profiles')
+      .select('*')
+      .eq('id', authUser.id)
+      .maybeSingle();
+
+    const localUser = getCurrentUser() || {};
+    const user = {
+      id: authUser.id,
+      fullName: profile?.full_name || authUser.user_metadata?.full_name || authUser.user_metadata?.name || localUser.fullName || authUser.email?.split('@')[0] || 'Client',
+      email: authUser.email || profile?.email || localUser.email || '',
+      phone: profile?.phone || localUser.phone || '',
+      createdAt: profile?.created_at?.split('T')[0] || localUser.createdAt || new Date().toISOString().split('T')[0],
+      measurements: profile?.measurements || localUser.measurements || {},
+      notes: profile?.notes || localUser.notes || ''
+    };
+
+    await client.from('profiles').upsert({
+      id: user.id,
+      full_name: user.fullName,
+      phone: user.phone,
+      email: user.email,
+      measurements: user.measurements,
+      notes: user.notes,
+      updated_at: new Date().toISOString()
+    });
+
+    const users = getAllUsers().filter(existing => existing.id !== user.id && existing.email !== user.email);
+    users.push(user);
+    saveAllUsers(users);
+    localStorage.setItem(STORAGE_CURRENT_USER_KEY, JSON.stringify({
+      id: user.id,
+      fullName: user.fullName,
+      email: user.email,
+      phone: user.phone,
+      createdAt: user.createdAt
+    }));
+    return user;
+  }
+
+  async function registerUser(userData) {
+    const client = await global.TLT_SUPABASE?.getClient?.();
+    if (!client) return registerLocalUser(userData);
+
+    const { data, error } = await client.auth.signUp({
+      email: userData.email.trim().toLowerCase(),
+      password: userData.password,
+      options: { data: { full_name: userData.fullName, phone: userData.phone } }
+    });
+    if (error) return { success: false, message: error.message };
+
+    if (data.user && data.session) {
+      await getSupabaseProfile(data.user);
+      return { success: true, authenticated: true, message: 'Account created successfully! Welcome to TEJAS LADIES TYLOR.' };
+    }
+
+    return { success: true, authenticated: false, message: 'Account created. Check your email to confirm your account before signing in.' };
+  }
+
+  async function loginUser(email, password, remember = false) {
+    const client = await global.TLT_SUPABASE?.getClient?.();
+    if (!client) return loginLocalUser(email, password, remember);
+
+    const { data, error } = await client.auth.signInWithPassword({
+      email: email.trim().toLowerCase(),
+      password
+    });
+    if (error) return { success: false, message: error.message };
+
+    const user = await getSupabaseProfile(data.user);
+    if (remember) localStorage.setItem(STORAGE_REMEMBER_KEY, email.trim().toLowerCase());
+    else localStorage.removeItem(STORAGE_REMEMBER_KEY);
+    return { success: true, message: `Welcome back, ${user.fullName}!`, user };
+  }
+
+  async function syncOAuthUser(oauthUser) {
+    loginOAuthUser(oauthUser);
+    return getSupabaseProfile(oauthUser) || getCurrentUser();
+  }
+
+  async function updateUserProfile(updatedFields) {
+    const saved = updateLocalUserProfile(updatedFields);
+    if (!saved) return false;
+
+    const client = await global.TLT_SUPABASE?.getClient?.();
+    const current = getCurrentUser();
+    if (client && current?.id) {
+      const { error } = await client.from('profiles').upsert({
+        id: current.id,
+        full_name: current.fullName,
+        phone: current.phone,
+        email: current.email,
+        measurements: current.measurements || {},
+        notes: current.notes || '',
+        updated_at: new Date().toISOString()
+      });
+      if (error) console.error('Supabase profile update failed:', error);
+    }
     return true;
   }
 
@@ -351,6 +458,7 @@
     registerUser,
     loginUser,
     loginOAuthUser,
+    syncOAuthUser,
     logoutUser,
     isLoggedIn,
     getCurrentUser,

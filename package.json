@@ -8,6 +8,11 @@
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "start": "node dist/server.cjs",
     "preview": "vite preview",
+    "supabase:init": "npx supabase init",
+    "supabase:login": "npx supabase login",
+    "supabase:link": "npx supabase link --project-ref hzghrpyulzqqirkygkbd",
+    "supabase:projects": "npx supabase projects list",
+    "supabase:db:push": "npx supabase db push",
     "clean": "rm -rf dist server.js",
     "lint": "echo 'Lint passed successfully'"
   },

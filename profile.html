@@ -209,11 +209,13 @@
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0;">
         <span>&copy; 2026 TEJAS LADIES TYLOR. All Rights Reserved.</span>
-        <span>Electronic City, Bangalore &bull; +91 93802 24737</span>
+        <span>Talakad, Mysore, Karnataka &bull; +91 93802 24737</span>
       </div>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase-client.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/booking.js"></script>
   <script src="js/main.js"></script>
@@ -252,7 +254,7 @@
       if (user.notes) document.getElementById('mNotes').value = user.notes;
 
       // Save measurements form
-      document.getElementById('measurementsForm').addEventListener('submit', (e) => {
+      document.getElementById('measurementsForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const updatedMeasurements = {
           bust: document.getElementById('mBust').value.trim(),
@@ -266,7 +268,7 @@
         };
         const notes = document.getElementById('mNotes').value.trim();
 
-        window.TLT_AUTH.updateUserProfile({
+        await window.TLT_AUTH.updateUserProfile({
           measurements: updatedMeasurements,
           notes
         });
@@ -275,7 +277,7 @@
       });
 
       // Save personal info form
-      document.getElementById('personalInfoForm').addEventListener('submit', (e) => {
+      document.getElementById('personalInfoForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const fullName = document.getElementById('profName').value.trim();
         const phone = document.getElementById('profPhone').value.trim();
@@ -285,7 +287,7 @@
           return;
         }
 
-        window.TLT_AUTH.updateUserProfile({ fullName, phone });
+        await window.TLT_AUTH.updateUserProfile({ fullName, phone });
         document.getElementById('userFullNameHeading').textContent = fullName;
         document.getElementById('userEmailPara').textContent = `${user.email} • ${phone}`;
         document.getElementById('avatarInitial').textContent = fullName.charAt(0).toUpperCase();

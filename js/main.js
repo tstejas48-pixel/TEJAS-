@@ -89,11 +89,11 @@
 
     // Attach logout event listeners
     document.querySelectorAll('.btn-logout').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', async (e) => {
         e.preventDefault();
         if (confirm('Are you sure you want to log out from TEJAS LADIES TYLOR?')) {
           if (window.TLT_AUTH) {
-            window.TLT_AUTH.logoutUser();
+            await window.TLT_AUTH.logoutUser();
             showToast('You have been logged out.', 'info');
             setTimeout(() => {
               window.location.href = 'index.html';

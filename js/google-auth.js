@@ -22,7 +22,7 @@
     const { data, error } = await client.auth.getSession();
     if (error) throw error;
     if (data.session?.user) {
-      global.TLT_AUTH.loginOAuthUser(data.session.user);
+      await global.TLT_AUTH.syncOAuthUser(data.session.user);
       const returnUrl = new URLSearchParams(window.location.search).get('returnUrl') || 'profile.html';
       window.location.href = decodeURIComponent(returnUrl);
     }
